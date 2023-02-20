@@ -3,6 +3,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        Console.BackgroundColor = ConsoleColor.DarkMagenta;
         Console.WriteLine("Değişken tanımlama");
 
         //Tamsayı değişken tipleri
@@ -48,5 +49,67 @@ internal class Program
 
         a = a % 2;
         a %= 2;
+
+        //Karakter tipleri
+
+        char karakter = 'a';
+        karakter = '\u006A';
+
+        Console.WriteLine(karakter);
+
+        string kelime = "Merhaba Dünya";
+
+        char[] kelimeDizi = new[] { 'M', 'e', 'r' };
+
+        char harf = kelime[1];
+
+        Console.WriteLine(kelimeDizi[2]);
+        Console.WriteLine(kelime[2]);
+
+        //Mantıksal tip
+
+        bool dogruMu = true;
+
+        //Mantıksal operatörler
+
+        // > < >= <= == != ! işlem  && ||
+        // 
+        dogruMu = degiskenInt > degiskenDouble;
+        Console.WriteLine(dogruMu);
+        dogruMu = degiskenUShort < degiskenInt && kelime.Length > 10;
+
+        bool tekMi = a % 2 == 1;
+
+        Console.WriteLine("İşlemin sonucu: " + (5 + 6 + 9));
+        Console.WriteLine(tekMi.ToString());
+        Console.WriteLine(tekMi + "");
+        Console.WriteLine(tekMi);
+        Console.Clear();
+        Console.CursorSize = 14;
+        Console.WriteLine();
+
+        for (int i = 0; i < 30; i++)
+        {
+            DateTime simdi = DateTime.Now;
+
+            Console.WriteLine(simdi.Hour + ":" + simdi.Minute + ":" + simdi.Second);
+            //Thread.Sleep(1000);
+            Console.Clear();
+        }
+        
+        //escape sequances 
+
+        /*
+         * \n newLine
+         * \t tab
+         * \b backSpace
+         * \\
+         * \"
+         * @
+         */
+
+        kelime = "Bu hikayenin çok uzun bir kısmını \n\"Bu metin\" karşılamaktadır.";
+        string path = @"c:\new\falan.txt";
+        Console.WriteLine(kelime);
     }
 }
