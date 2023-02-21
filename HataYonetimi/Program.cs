@@ -39,3 +39,14 @@ if(hak>0)
     Console.WriteLine("Aferin başarabildin");
 else
     Console.WriteLine("Başaramadın :(");
+
+Console.WriteLine("Bir sayı daha girin");
+string giris = Console.ReadLine();
+if (int.TryParse(giris, out int sayi))
+{
+    Console.WriteLine("Girdiğiniz sayı: " + sayi);
+}
+else
+{
+    Console.WriteLine("Sayı girmeyi beceremedin");
+}
