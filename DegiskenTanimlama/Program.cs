@@ -92,11 +92,13 @@ internal class Program
         {
             DateTime simdi = DateTime.Now;
 
-            Console.WriteLine(simdi.Hour + ":" + simdi.Minute + ":" + simdi.Second);
-            //Thread.Sleep(1000);
+            Console.WriteLine(simdi.Hour.ToString("00") + ":" + simdi.Minute.ToString("00") + ":" + simdi.Second.ToString("00"));
+            Console.WriteLine($"{simdi.Hour:00}:{simdi.Minute:00}:{simdi.Second:00}");
+            Console.WriteLine($"{simdi:dd:MM:yyyy - HH:mm:ss}");
+            Thread.Sleep(1000);
             Console.Clear();
         }
-        
+
         //escape sequances 
 
         /*
