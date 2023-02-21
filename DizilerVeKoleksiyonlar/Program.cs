@@ -92,3 +92,19 @@ var sonuc = sayilar3.Where(x => x > 18 && x < 25).ToList();
 //programa dışarıdan 1-6 arası bir sayı girilecek ve program her seferinde 2 zar atacak. Atılan zar çiftleri eğer girdiğimiz sayıya eşit olursa program bitecek ve kaç denemede bulduğunu ekrana yazacak.(önceki denemeleri de ekrana yazdırabilirsiniz)
 
 //ödev3 dışarıdan girilen 0-9999 arasındaki tüm sayıların okunuşunu ekrana yazan programı yazınız.
+
+var rastgeleSayilar = Enumerable.Range(1, 49).OrderBy(x => rnd.Next()).Take(6).ToList();
+Console.WriteLine();
+
+
+int sayi1 = 5;
+int sayi2 = 10;
+sayi1 = sayi2;
+sayi2 = 15;
+Console.WriteLine(sayi1); //10
+
+int[] sayilar11 = new[] { 1, 2, 3 };
+int[] sayilar22 = new[] { 4, 5, 6 };
+sayilar11 = sayilar22;
+sayilar22[0] = 10;
+Console.WriteLine(sayilar11[0]);//10
