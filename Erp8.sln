@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KararYapilariveDonguler", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuayeneSaatleri", "MuayeneSaatleri\MuayeneSaatleri.csproj", "{2B6DCF4A-6E98-4459-A051-CAD8A9E92BE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DizilerVeKoleksiyonlar", "DizilerVeKoleksiyonlar\DizilerVeKoleksiyonlar.csproj", "{A27DC845-979A-402A-B246-0ADF3FE74DD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{2B6DCF4A-6E98-4459-A051-CAD8A9E92BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B6DCF4A-6E98-4459-A051-CAD8A9E92BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B6DCF4A-6E98-4459-A051-CAD8A9E92BE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27DC845-979A-402A-B246-0ADF3FE74DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27DC845-979A-402A-B246-0ADF3FE74DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27DC845-979A-402A-B246-0ADF3FE74DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27DC845-979A-402A-B246-0ADF3FE74DD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{464B10EC-AA95-4EB8-856B-E327E0B6C8B0} = {35E6F847-AAD2-4FB5-BA17-FC93933F4DA9}
 		{41A66FFA-A514-4B9E-96C3-4DFA133FFFB5} = {35E6F847-AAD2-4FB5-BA17-FC93933F4DA9}
 		{2B6DCF4A-6E98-4459-A051-CAD8A9E92BE6} = {35E6F847-AAD2-4FB5-BA17-FC93933F4DA9}
+		{A27DC845-979A-402A-B246-0ADF3FE74DD4} = {35E6F847-AAD2-4FB5-BA17-FC93933F4DA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38F32A3E-6269-4FF8-8D24-3FF69886088B}
