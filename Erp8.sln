@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Gün", "3. Gün", "{2D8F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odev1", "Odev1\Odev1.csproj", "{7F313B85-927F-4D38-B965-18E46644AFA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CokBoyutluDiziler", "CokBoyutluDiziler\CokBoyutluDiziler.csproj", "{1C57976A-E014-404E-BD54-174357505A27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{7F313B85-927F-4D38-B965-18E46644AFA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F313B85-927F-4D38-B965-18E46644AFA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F313B85-927F-4D38-B965-18E46644AFA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C57976A-E014-404E-BD54-174357505A27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C57976A-E014-404E-BD54-174357505A27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C57976A-E014-404E-BD54-174357505A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C57976A-E014-404E-BD54-174357505A27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{2B6DCF4A-6E98-4459-A051-CAD8A9E92BE6} = {35E6F847-AAD2-4FB5-BA17-FC93933F4DA9}
 		{A27DC845-979A-402A-B246-0ADF3FE74DD4} = {35E6F847-AAD2-4FB5-BA17-FC93933F4DA9}
 		{7F313B85-927F-4D38-B965-18E46644AFA7} = {2D8F8537-97B4-4276-AA29-9F7966D64C02}
+		{1C57976A-E014-404E-BD54-174357505A27} = {2D8F8537-97B4-4276-AA29-9F7966D64C02}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38F32A3E-6269-4FF8-8D24-3FF69886088B}
