@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odev1", "Odev1\Odev1.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CokBoyutluDiziler", "CokBoyutluDiziler\CokBoyutluDiziler.csproj", "{1C57976A-E014-404E-BD54-174357505A27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodKullanimi", "MethodKullanimi\MethodKullanimi.csproj", "{DC758210-20FC-4CC3-91C1-B69D455C5781}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{1C57976A-E014-404E-BD54-174357505A27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C57976A-E014-404E-BD54-174357505A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C57976A-E014-404E-BD54-174357505A27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC758210-20FC-4CC3-91C1-B69D455C5781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC758210-20FC-4CC3-91C1-B69D455C5781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC758210-20FC-4CC3-91C1-B69D455C5781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC758210-20FC-4CC3-91C1-B69D455C5781}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{A27DC845-979A-402A-B246-0ADF3FE74DD4} = {35E6F847-AAD2-4FB5-BA17-FC93933F4DA9}
 		{7F313B85-927F-4D38-B965-18E46644AFA7} = {2D8F8537-97B4-4276-AA29-9F7966D64C02}
 		{1C57976A-E014-404E-BD54-174357505A27} = {2D8F8537-97B4-4276-AA29-9F7966D64C02}
+		{DC758210-20FC-4CC3-91C1-B69D455C5781} = {2D8F8537-97B4-4276-AA29-9F7966D64C02}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38F32A3E-6269-4FF8-8D24-3FF69886088B}
