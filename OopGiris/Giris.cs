@@ -40,7 +40,7 @@
 
         public Giris()
         {
-            this.IslemTarihi = DateTime.Now;
+            //this.IslemTarihi = DateTime.Now;
         }
 
         private decimal _fiyat;
@@ -67,7 +67,7 @@
         //Full Property 1adet field'ın encapsule edilmesi ile oluşur.
 
         //Auto Property 
-        public DateTime IslemTarihi { get; private set; }
+        public DateTime IslemTarihi { get; private set; } = DateTime.Now;
         public int Yas //readonly property
         {
             get => DateTime.Now.Year - this.DogumTarihi.Year;
@@ -78,6 +78,7 @@
             set
             {
                 _dogumTarihi = value;
+
             }
         }
     }
