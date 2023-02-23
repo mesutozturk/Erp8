@@ -2,4 +2,9 @@
 
 GameHelper game = new GameHelper();
 Random rnd = new Random();
-Console.WriteLine(game.EkraniYaz());
+do
+{
+    Console.WriteLine(game.EkraniYaz());
+    game.TahminYap(Console.ReadLine());
+} while (game.OyunAktifMi());
+
