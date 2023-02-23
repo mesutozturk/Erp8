@@ -1,15 +1,16 @@
 ﻿using AdamAsmaca.Helpers;
 
 ConsoleKey key;
-Console.Clear();
 do
 {
     GameHelper game = new GameHelper();
     Random rnd = new Random();
+    Console.Clear();
     do
     {
         Console.WriteLine(game.EkraniYaz());
-        game.TahminYap(Console.ReadLine());
+        var sonuc = game.TahminYap(Console.ReadLine());
+        if(!sonuc) Console.Beep(5100,300);
     } while (game.OyunAktifMi());
 
     if (game.HakKontrol() > 0)
