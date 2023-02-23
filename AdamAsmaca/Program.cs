@@ -1,6 +1,7 @@
 ﻿using AdamAsmaca.Helpers;
 
 ConsoleKey key;
+Console.Clear();
 do
 {
     GameHelper game = new GameHelper();
@@ -16,6 +17,10 @@ do
         Console.WriteLine(game.SeciliSoru);
         Console.WriteLine("Tebrikler Bildiniz");
         Console.WriteLine($"Puanınız: {game.PuanKontrol()}");
+    }
+    else
+    {
+        Console.WriteLine("Bilemediniz :(");
     }
 
     Console.WriteLine("Tekrar oynamak için E tuşuna basınız");
