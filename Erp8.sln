@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CokBoyutluDiziler", "CokBoy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodKullanimi", "MethodKullanimi\MethodKullanimi.csproj", "{DC758210-20FC-4CC3-91C1-B69D455C5781}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Gün", "4. Gün", "{5CDBAA09-1E5F-4E15-84EB-CFB2978BD0E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinAliCizimi", "CinAliCizimi\CinAliCizimi.csproj", "{217A14E1-C4C8-4FB8-8771-F2AF8737D1FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,10 @@ Global
 		{DC758210-20FC-4CC3-91C1-B69D455C5781}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC758210-20FC-4CC3-91C1-B69D455C5781}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC758210-20FC-4CC3-91C1-B69D455C5781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217A14E1-C4C8-4FB8-8771-F2AF8737D1FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217A14E1-C4C8-4FB8-8771-F2AF8737D1FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217A14E1-C4C8-4FB8-8771-F2AF8737D1FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217A14E1-C4C8-4FB8-8771-F2AF8737D1FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +84,7 @@ Global
 		{7F313B85-927F-4D38-B965-18E46644AFA7} = {2D8F8537-97B4-4276-AA29-9F7966D64C02}
 		{1C57976A-E014-404E-BD54-174357505A27} = {2D8F8537-97B4-4276-AA29-9F7966D64C02}
 		{DC758210-20FC-4CC3-91C1-B69D455C5781} = {2D8F8537-97B4-4276-AA29-9F7966D64C02}
+		{217A14E1-C4C8-4FB8-8771-F2AF8737D1FB} = {5CDBAA09-1E5F-4E15-84EB-CFB2978BD0E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38F32A3E-6269-4FF8-8D24-3FF69886088B}
