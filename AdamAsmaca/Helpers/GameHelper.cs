@@ -23,7 +23,6 @@ public class GameHelper
     private string RastgeleSoruSec() => Sorular[new Random().Next(Sorular.Length)];
     public int HakKontrol() => _hak;
     public int PuanKontrol() => _puan;
-
     public string EkraniYaz() => string.Join(' ', _ekran);
 
 }
