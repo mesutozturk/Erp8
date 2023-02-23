@@ -11,25 +11,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Gün", "2. Gün", "{35E6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HataYonetimi", "HataYonetimi\HataYonetimi.csproj", "{464B10EC-AA95-4EB8-856B-E327E0B6C8B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KararYapilariveDonguler", "KararYapilariveDonguler\KararYapilariveDonguler.csproj", "{41A66FFA-A514-4B9E-96C3-4DFA133FFFB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KararYapilariveDonguler", "KararYapilariveDonguler\KararYapilariveDonguler.csproj", "{41A66FFA-A514-4B9E-96C3-4DFA133FFFB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuayeneSaatleri", "MuayeneSaatleri\MuayeneSaatleri.csproj", "{2B6DCF4A-6E98-4459-A051-CAD8A9E92BE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MuayeneSaatleri", "MuayeneSaatleri\MuayeneSaatleri.csproj", "{2B6DCF4A-6E98-4459-A051-CAD8A9E92BE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DizilerVeKoleksiyonlar", "DizilerVeKoleksiyonlar\DizilerVeKoleksiyonlar.csproj", "{A27DC845-979A-402A-B246-0ADF3FE74DD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DizilerVeKoleksiyonlar", "DizilerVeKoleksiyonlar\DizilerVeKoleksiyonlar.csproj", "{A27DC845-979A-402A-B246-0ADF3FE74DD4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Gün", "3. Gün", "{2D8F8537-97B4-4276-AA29-9F7966D64C02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odev1", "Odev1\Odev1.csproj", "{7F313B85-927F-4D38-B965-18E46644AFA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Odev1", "Odev1\Odev1.csproj", "{7F313B85-927F-4D38-B965-18E46644AFA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CokBoyutluDiziler", "CokBoyutluDiziler\CokBoyutluDiziler.csproj", "{1C57976A-E014-404E-BD54-174357505A27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CokBoyutluDiziler", "CokBoyutluDiziler\CokBoyutluDiziler.csproj", "{1C57976A-E014-404E-BD54-174357505A27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodKullanimi", "MethodKullanimi\MethodKullanimi.csproj", "{DC758210-20FC-4CC3-91C1-B69D455C5781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodKullanimi", "MethodKullanimi\MethodKullanimi.csproj", "{DC758210-20FC-4CC3-91C1-B69D455C5781}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Gün", "4. Gün", "{5CDBAA09-1E5F-4E15-84EB-CFB2978BD0E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinAliCizimi", "CinAliCizimi\CinAliCizimi.csproj", "{217A14E1-C4C8-4FB8-8771-F2AF8737D1FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinAliCizimi", "CinAliCizimi\CinAliCizimi.csproj", "{217A14E1-C4C8-4FB8-8771-F2AF8737D1FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdamAsmaca", "AdamAsmaca\AdamAsmaca.csproj", "{488E4873-9DFC-44B0-9A98-D01DED36B394}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdamAsmaca", "AdamAsmaca\AdamAsmaca.csproj", "{488E4873-9DFC-44B0-9A98-D01DED36B394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopGiris", "OopGiris\OopGiris.csproj", "{E5D4DBA9-896B-4DFC-A377-C0DA365A1A02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{488E4873-9DFC-44B0-9A98-D01DED36B394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{488E4873-9DFC-44B0-9A98-D01DED36B394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{488E4873-9DFC-44B0-9A98-D01DED36B394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5D4DBA9-896B-4DFC-A377-C0DA365A1A02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5D4DBA9-896B-4DFC-A377-C0DA365A1A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5D4DBA9-896B-4DFC-A377-C0DA365A1A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5D4DBA9-896B-4DFC-A377-C0DA365A1A02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{DC758210-20FC-4CC3-91C1-B69D455C5781} = {2D8F8537-97B4-4276-AA29-9F7966D64C02}
 		{217A14E1-C4C8-4FB8-8771-F2AF8737D1FB} = {5CDBAA09-1E5F-4E15-84EB-CFB2978BD0E5}
 		{488E4873-9DFC-44B0-9A98-D01DED36B394} = {5CDBAA09-1E5F-4E15-84EB-CFB2978BD0E5}
+		{E5D4DBA9-896B-4DFC-A377-C0DA365A1A02} = {5CDBAA09-1E5F-4E15-84EB-CFB2978BD0E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38F32A3E-6269-4FF8-8D24-3FF69886088B}
