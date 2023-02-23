@@ -11,6 +11,7 @@ for (int i = 0; i < dotMatris.GetLength(0); i++)
 KafaCiz();
 GovdeCizimi();
 Uzuvlar(0);
+EkranaYaz();
 /*
  * 30,10
  * 40,20
@@ -71,8 +72,6 @@ void Uzuvlar(int param)
         dotMatris[25 + i, 30 - i] = '.';
     }
 }
-
-EkranaYaz();
 
 //Ekrana Yaz
 void EkranaYaz(bool isClear = true)
