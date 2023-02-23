@@ -12,7 +12,7 @@ do
         var sonuc = game.TahminYap(Console.ReadLine());
         if(!sonuc) Console.Beep(5100,300);
     } while (game.OyunAktifMi());
-
+    Console.WriteLine(game.EkraniYaz());
     if (game.HakKontrol() > 0)
     {
         Console.WriteLine(game.SeciliSoru);
