@@ -7,6 +7,13 @@ int[] sayilar = new int[5];
 
 int[] sayilar2 = new[] { 1, 5, 6, 3, 2 };
 
+unsafe
+{
+    int number = 43;
+    int* pNumber = &number;
+    Console.WriteLine(number);
+}
+
 for (int i = 0; i < sayilar2.Length; i++)
 {
     Console.WriteLine(sayilar2[i]);
@@ -108,3 +115,26 @@ int[] sayilar22 = new[] { 4, 5, 6 };
 sayilar11 = sayilar22;
 sayilar22[0] = 10;
 Console.WriteLine(sayilar11[0]);//10
+
+
+int[] yeniSayilar = sayilar[0..^3]; //0dan 3. indexe kadar 3(dahil değil) elemanları yeni diziye aktarır
+
+//https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#range-operator-
+
+bool xorDeneme = true ^ false; //true
+
+bool isActive = true;
+
+isActive = isActive && xorDeneme;
+isActive &= xorDeneme;
+isActive |= xorDeneme;
+isActive ^= xorDeneme;
+
+//Random rnd23 = new();
+//rnd23 = null;
+
+//if (rnd23 != null && rnd23.Next() == 10)
+//{
+
+//}
+

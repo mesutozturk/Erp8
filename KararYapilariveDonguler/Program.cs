@@ -55,7 +55,7 @@ for (int i = 0; i < 10; i++)
 while (true)
 {
     Console.WriteLine(DateTime.Now);
-    if(DateTime.Now.Minute==15)
+    if (DateTime.Now.Minute == 15)
         break;
 }
 
@@ -64,9 +64,9 @@ do
     Console.WriteLine(DateTime.Now);
 } while (true);
 
-for (;;)
+for (; ; )
 {
-    
+
 }
 
 //09:00 - 09:15
@@ -77,3 +77,31 @@ for (;;)
 //13.15 - 13.30
 
 //16:45 - 17:00
+
+int sayi2 = 324;
+if (sayi2 % 2 == 0)
+    Console.WriteLine("Çift");
+else
+    Console.WriteLine("Tek");
+
+string sonuc = sayi2 % 2 == 0 ? "Çift" : "Tek"; //Ternary-if
+
+Console.WriteLine(sayi2 % 2 == 0 ? "Çift" : "Tek");
+
+Random rnd;
+//rnd.Next(100);
+
+if (rnd == null)
+    rnd = new Random();
+
+sayi2 = sayi2 + 1;
+sayi2 += 1;
+
+rnd = rnd ?? new Random();
+
+rnd ??=new Random();
+
+// String methotlar 
+// Math Methodlar
+// DateTime Methodlar
+
