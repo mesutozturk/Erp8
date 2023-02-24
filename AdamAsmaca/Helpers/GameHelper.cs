@@ -16,7 +16,7 @@ public class GameHelper
     }
 
     public readonly string SeciliSoru;
-    public string[] Sorular = { "zeytinburnu", "kahramanmaraş", "çanakkale", "hayrabolu" };
+    private string[] _sorular = { "zeytinburnu", "kahramanmaraş", "çanakkale", "hayrabolu" };
     private int _hak = 6;
     private int _puan = 0;
     private char[] _ekran;
@@ -24,7 +24,7 @@ public class GameHelper
     private readonly List<char> _oncekiTahminler = new();
     private readonly Grafik _grafik = new();
 
-    private string RastgeleSoruSec() => Sorular[new Random().Next(Sorular.Length)];
+    private string RastgeleSoruSec() => _sorular[new Random().Next(_sorular.Length)];
     public int HakKontrol() => _hak;
     public int PuanKontrol() => _puan;
     public string EkraniYaz()
@@ -92,6 +92,5 @@ public class GameHelper
 
         return dogruMu;
     }
-
     public bool OyunAktifMi() => _oyunDevamEdiyorMu;
 }

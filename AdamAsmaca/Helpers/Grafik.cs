@@ -43,7 +43,7 @@ public class Grafik
     public void Uzuvlar(Uzuvlar uzuv)
     {
         //sağ kol
-        if (uzuv == Helpers.Uzuvlar.SagKol)
+        if (uzuv == 0)
             for (int i = 0; i < 10; i++)
             {
                 _dotMatris[10 + i, 30 + i] = '.';
