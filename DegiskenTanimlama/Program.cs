@@ -16,6 +16,7 @@ internal class Program
         long degiskenLong = 0;
         ulong degiskenULong = 0L;
 
+
         //ondalık değişken tipleri
 
         double degiskenDouble = 0.5D;
