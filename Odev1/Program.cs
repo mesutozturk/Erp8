@@ -28,6 +28,12 @@ do
 
 Console.WriteLine("Program sonlandı.");
 
+
+
+
+
+
+
 #region Methodlar
 /// <summary>
 /// Sayı tahmin oyununu başlatır
