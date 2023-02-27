@@ -80,6 +80,12 @@
                 _dogumTarihi = value;
 
             }
+
+
+
         }
     }
 }
+
+
+
