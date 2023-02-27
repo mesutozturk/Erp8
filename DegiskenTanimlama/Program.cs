@@ -16,7 +16,9 @@ internal class Program
         long degiskenLong = 0;
         ulong degiskenULong = 0L;
 
+
         //ondalık değişken tipleri
+
 
         double degiskenDouble = 0.5D;
         float degiskenFloat = 0.5F;
@@ -43,6 +45,7 @@ internal class Program
         a = ++b;
         Console.WriteLine(a);
         Console.WriteLine(b);
+
 
         a = a + 10;
         a += 10;
