@@ -1,1 +1,1 @@
-﻿Console.WriteLine("OOP Giriş");
+﻿Console.WriteLine("OOP Giriş Ders");
