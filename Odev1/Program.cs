@@ -27,6 +27,13 @@ do
 } while (devamMi);
 
 Console.WriteLine("Program sonlandı.");
+Console.WriteLine("Cerennn");
+
+
+
+
+
+
 
 #region Methodlar
 /// <summary>
