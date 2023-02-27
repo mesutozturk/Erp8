@@ -16,20 +16,35 @@ public class GameHelper
     }
 
     public readonly string SeciliSoru;
-    public string[] Sorular = { "zeytinburnu", "kahramanmaraş", "çanakkale", "hayrabolu" };
+    private string[] _sorular = { "zeytinburnu", "kahramanmaraş", "çanakkale", "hayrabolu" };
     private int _hak = 6;
     private int _puan = 0;
     private char[] _ekran;
     private bool _oyunDevamEdiyorMu;
     private readonly List<char> _oncekiTahminler = new();
+    private readonly Grafik _grafik = new();
 
-    private string RastgeleSoruSec() => Sorular[new Random().Next(Sorular.Length)];
+    private string RastgeleSoruSec() => _sorular[new Random().Next(_sorular.Length)];
     public int HakKontrol() => _hak;
     public int PuanKontrol() => _puan;
     public string EkraniYaz()
     {
         string skorBoard = $"Puan: {_puan}\tKalan Hak: {_hak}";
         string ekran = string.Join(' ', _ekran);
+        if (_hak == 5)
+            _grafik.KafaCiz();
+        else if (_hak == 4)
+            _grafik.GovdeCizimi();
+        else if (_hak == 3)
+            _grafik.Uzuvlar(Uzuvlar.SagKol);
+        else if (_hak == 2)
+            _grafik.Uzuvlar(Uzuvlar.SolKol);
+        else if (_hak == 1)
+            _grafik.Uzuvlar(Uzuvlar.SagBacak);
+        else if(_hak == 0)
+            _grafik.Uzuvlar(Uzuvlar.SolBacak);
+
+        _grafik.EkranaYaz();
         return $"{skorBoard}\n{ekran}";
     }
     public bool TahminYap(string tahmin)
@@ -77,6 +92,5 @@ public class GameHelper
 
         return dogruMu;
     }
-
     public bool OyunAktifMi() => _oyunDevamEdiyorMu;
 }

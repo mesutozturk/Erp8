@@ -18,4 +18,3 @@ for (int i = 0; i < dizi.GetLength(0); i++)
 }
 
 Console.WriteLine();
-

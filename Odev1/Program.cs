@@ -29,6 +29,12 @@ do
 Console.WriteLine("Program sonlandı.");
 Console.WriteLine("Cerennn");
 
+
+
+
+
+
+
 #region Methodlar
 /// <summary>
 /// Sayı tahmin oyununu başlatır
