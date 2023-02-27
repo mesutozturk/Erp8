@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Security.Cryptography;
 
 namespace WfaGiris
 {
@@ -15,6 +7,36 @@ namespace WfaGiris
         public FormKisiler()
         {
             InitializeComponent();
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Kisi kisi = new Kisi();
+                //kisi.Ad = txtAd.Text;
+                //kisi.Soyad = txtSoyad.Text;
+                //kisi.Tckn = txtTckn.Text;
+                //kisi.DogumTarihi = dtpDogumTarihi.Value;
+                //kisi.Telefon = txtTelefon.Text;
+                //kisi.Email = txtEmail.Text;
+                Kisi yeniKisi = new Kisi() //Object Initializer
+                {
+                    Ad = txtAd.Text,
+                    Soyad = txtSoyad.Text,
+                    Tckn = txtTckn.Text,
+                    DogumTarihi = dtpDogumTarihi.Value,
+                    Email = txtEmail.Text,
+                    Telefon = txtTelefon.Text
+                };
+
+                lstKisiler.DisplayMember = "Ad";
+                lstKisiler.Items.Add(yeniKisi);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Bir Hata Oluştu! {ex.Message}");
+            }
         }
     }
 }

@@ -91,4 +91,9 @@ public class Kisi
     }
 
     public int Yas => DateTime.Now.Year - this.DogumTarihi.Year;
+
+    public override string ToString()
+    {
+        return $"{this.Ad} {this.Soyad} - {this.Yas}";
+    }
 }
