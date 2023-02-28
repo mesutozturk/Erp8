@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -41,7 +42,11 @@
             txtTelefon = new TextBox();
             btnKaydet = new Button();
             lstKisiler = new ListBox();
+            cmsSil = new ContextMenuStrip(components);
+            düzenleToolStripMenuItem = new ToolStripMenuItem();
+            silToolStripMenuItem = new ToolStripMenuItem();
             dtpDogumTarihi = new DateTimePicker();
+            cmsSil.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -135,9 +140,9 @@
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(151, 165);
+            btnKaydet.Location = new Point(89, 165);
             btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(92, 52);
+            btnKaydet.Size = new Size(154, 52);
             btnKaydet.TabIndex = 6;
             btnKaydet.Text = "Kaydet";
             btnKaydet.UseVisualStyleBackColor = true;
@@ -145,6 +150,7 @@
             // 
             // lstKisiler
             // 
+            lstKisiler.ContextMenuStrip = cmsSil;
             lstKisiler.FormattingEnabled = true;
             lstKisiler.ItemHeight = 15;
             lstKisiler.Location = new Point(249, 6);
@@ -152,6 +158,26 @@
             lstKisiler.Size = new Size(154, 214);
             lstKisiler.TabIndex = 7;
             lstKisiler.SelectedIndexChanged += lstKisiler_SelectedIndexChanged;
+            // 
+            // cmsSil
+            // 
+            cmsSil.Items.AddRange(new ToolStripItem[] { düzenleToolStripMenuItem });
+            cmsSil.Name = "cmsSil";
+            cmsSil.Size = new Size(117, 26);
+            // 
+            // düzenleToolStripMenuItem
+            // 
+            düzenleToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { silToolStripMenuItem });
+            düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
+            düzenleToolStripMenuItem.Size = new Size(116, 22);
+            düzenleToolStripMenuItem.Text = "Düzenle";
+            // 
+            // silToolStripMenuItem
+            // 
+            silToolStripMenuItem.Name = "silToolStripMenuItem";
+            silToolStripMenuItem.Size = new Size(86, 22);
+            silToolStripMenuItem.Text = "Sil";
+            silToolStripMenuItem.Click += silToolStripMenuItem_Click;
             // 
             // dtpDogumTarihi
             // 
@@ -182,6 +208,7 @@
             Controls.Add(label1);
             Name = "FormKisiler";
             Text = "FormKisiler";
+            cmsSil.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -202,5 +229,8 @@
         private Button btnKaydet;
         private ListBox lstKisiler;
         private DateTimePicker dtpDogumTarihi;
+        private ContextMenuStrip cmsSil;
+        private ToolStripMenuItem düzenleToolStripMenuItem;
+        private ToolStripMenuItem silToolStripMenuItem;
     }
 }

@@ -8,35 +8,57 @@ namespace WfaGiris
         {
             InitializeComponent();
         }
-
+        private List<Kisi> _kisiler = new List<Kisi>();
+        private Kisi? _seciliKisi;
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            try
-            {
-                //Kisi kisi = new Kisi();
-                //kisi.Ad = txtAd.Text;
-                //kisi.Soyad = txtSoyad.Text;
-                //kisi.Tckn = txtTckn.Text;
-                //kisi.DogumTarihi = dtpDogumTarihi.Value;
-                //kisi.Telefon = txtTelefon.Text;
-                //kisi.Email = txtEmail.Text;
-                Kisi yeniKisi = new Kisi() //Object Initializer
+            if (_seciliKisi == null)
+                try
                 {
-                    Ad = txtAd.Text,
-                    Soyad = txtSoyad.Text,
-                    Tckn = txtTckn.Text,
-                    DogumTarihi = dtpDogumTarihi.Value,
-                    Email = txtEmail.Text,
-                    Telefon = txtTelefon.Text
-                };
+                    //Kisi kisi = new Kisi();
+                    //kisi.Ad = txtAd.Text;
+                    //kisi.Soyad = txtSoyad.Text;
+                    //kisi.Tckn = txtTckn.Text;
+                    //kisi.DogumTarihi = dtpDogumTarihi.Value;
+                    //kisi.Telefon = txtTelefon.Text;
+                    //kisi.Email = txtEmail.Text;
+                    Kisi yeniKisi = new Kisi() //Object Initializer
+                    {
+                        Ad = txtAd.Text,
+                        Soyad = txtSoyad.Text,
+                        Tckn = txtTckn.Text,
+                        DogumTarihi = dtpDogumTarihi.Value,
+                        Email = txtEmail.Text,
+                        Telefon = txtTelefon.Text
+                    };
 
-                //lstKisiler.DisplayMember = "Ad";
-                lstKisiler.Items.Add(yeniKisi);
-                FormuTemizle();
-            }
-            catch (Exception ex)
+                    //lstKisiler.DisplayMember = "Ad";
+                    lstKisiler.Items.Add(yeniKisi);
+                    FormuTemizle();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Bir Hata Oluştu! {ex.Message}");
+                }
+            else
             {
-                MessageBox.Show($"Bir Hata Oluştu! {ex.Message}");
+                //Güncelleme işlemi
+                try
+                {
+                    _seciliKisi.Ad = txtAd.Text;
+                    _seciliKisi.Soyad = txtSoyad.Text;
+                    _seciliKisi.Tckn = txtTckn.Text;
+                    _seciliKisi.DogumTarihi = dtpDogumTarihi.Value;
+                    _seciliKisi.Email = txtEmail.Text;
+                    _seciliKisi.Telefon = txtTelefon.Text;
+                    FormuTemizle();
+                    btnKaydet.Text = "Kaydet";
+                    _seciliKisi = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Bir Hata Oluştu! {ex.Message}");
+                }
             }
         }
 
@@ -57,7 +79,9 @@ namespace WfaGiris
                 else if (item is ComboBox combo)
                     combo.SelectedIndex = -1;
                 else if (item is ListBox listBox)
+                {
                     listBox.SelectedIndex = -1;
+                }
             }
             //txtAd.Text = string.Empty;
             //txtSoyad.Text = string.Empty;
@@ -68,12 +92,38 @@ namespace WfaGiris
 
         }
 
+
         private void lstKisiler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lstKisiler.SelectedItem == null) return;
+            if (lstKisiler.SelectedItem == null)
+            {
+                _seciliKisi = null;
+                return;
+            }
 
+            _seciliKisi = lstKisiler.SelectedItem as Kisi;
+            txtAd.Text = _seciliKisi.Ad;
+            txtSoyad.Text = _seciliKisi.Soyad;
+            txtTckn.Text = _seciliKisi.Tckn;
+            txtTelefon.Text = _seciliKisi.Telefon;
+            txtEmail.Text = _seciliKisi.Email;
+            dtpDogumTarihi.Value = _seciliKisi.DogumTarihi;
+
+            btnKaydet.Text = "Güncelle";
+        }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lstKisiler.SelectedItem == null) return;
             var seciliKisi = lstKisiler.SelectedItem as Kisi;
 
+            DialogResult result = MessageBox.Show($"{seciliKisi.Ad} {seciliKisi.Soyad} kişisini silmek istiyor musunuz?", "Silme Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                lstKisiler.Items.Remove(seciliKisi);
+                FormuTemizle();
+            }
         }
     }
 }
