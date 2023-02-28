@@ -46,6 +46,7 @@
             düzenleToolStripMenuItem = new ToolStripMenuItem();
             silToolStripMenuItem = new ToolStripMenuItem();
             dtpDogumTarihi = new DateTimePicker();
+            txtAra = new TextBox();
             cmsSil.SuspendLayout();
             SuspendLayout();
             // 
@@ -153,9 +154,9 @@
             lstKisiler.ContextMenuStrip = cmsSil;
             lstKisiler.FormattingEnabled = true;
             lstKisiler.ItemHeight = 15;
-            lstKisiler.Location = new Point(249, 6);
+            lstKisiler.Location = new Point(249, 36);
             lstKisiler.Name = "lstKisiler";
-            lstKisiler.Size = new Size(154, 214);
+            lstKisiler.Size = new Size(154, 184);
             lstKisiler.TabIndex = 7;
             lstKisiler.SelectedIndexChanged += lstKisiler_SelectedIndexChanged;
             // 
@@ -187,11 +188,23 @@
             dtpDogumTarihi.Size = new Size(154, 23);
             dtpDogumTarihi.TabIndex = 2;
             // 
+            // txtAra
+            // 
+            txtAra.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtAra.ForeColor = Color.Tomato;
+            txtAra.Location = new Point(249, 7);
+            txtAra.Name = "txtAra";
+            txtAra.PlaceholderText = "Ara";
+            txtAra.Size = new Size(154, 23);
+            txtAra.TabIndex = 8;
+            txtAra.KeyUp += txtAra_KeyUp;
+            // 
             // FormKisiler
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(415, 232);
+            Controls.Add(txtAra);
             Controls.Add(dtpDogumTarihi);
             Controls.Add(lstKisiler);
             Controls.Add(btnKaydet);
@@ -232,5 +245,6 @@
         private ContextMenuStrip cmsSil;
         private ToolStripMenuItem düzenleToolStripMenuItem;
         private ToolStripMenuItem silToolStripMenuItem;
+        private TextBox txtAra;
     }
 }

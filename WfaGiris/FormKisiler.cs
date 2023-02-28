@@ -128,5 +128,39 @@ namespace WfaGiris
                 FormuTemizle();
             }
         }
+
+        private void txtAra_KeyUp(object sender, KeyEventArgs e)
+        {
+            string arama = txtAra.Text.ToLower();
+            //if (arama.Length < 3) return;
+
+            List<Kisi> sonuc = new List<Kisi>();
+
+            foreach (Kisi item in _kisiler)
+            {
+                if (item.Ad.ToLower().Contains(arama) || item.Soyad.ToLower().Contains(arama) || item.Tckn.ToLower().StartsWith(arama))
+                    sonuc.Add(item);
+            }
+            lstKisiler.DataSource = null;
+            lstKisiler.DataSource = sonuc;
+
+            //2. yöntem
+            sonuc = new();
+            _kisiler.ForEach(item =>
+            {
+                if (item.Ad.ToLower().Contains(arama) || item.Soyad.ToLower().Contains(arama) || item.Tckn.ToLower().StartsWith(arama))
+                    sonuc.Add(item);
+            });
+            lstKisiler.DataSource = null;
+            lstKisiler.DataSource = sonuc;
+
+            //3. yöntem (Linq)
+            sonuc = _kisiler
+                .Where(item => item.Ad.ToLower().Contains(arama) || item.Soyad.ToLower().Contains(arama) || item.Tckn.ToLower().StartsWith(arama))
+                .ToList();
+
+            lstKisiler.DataSource = null;
+            lstKisiler.DataSource = sonuc;
+        }
     }
 }
