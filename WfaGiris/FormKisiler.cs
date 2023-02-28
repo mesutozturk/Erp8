@@ -33,7 +33,9 @@ namespace WfaGiris
                     };
 
                     //lstKisiler.DisplayMember = "Ad";
-                    lstKisiler.Items.Add(yeniKisi);
+                    //lstKisiler.Items.Add(yeniKisi);
+                    _kisiler.Add(yeniKisi);
+                    lstKisiler.DataSource = _kisiler;
                     FormuTemizle();
                 }
                 catch (Exception ex)
@@ -54,6 +56,8 @@ namespace WfaGiris
                     FormuTemizle();
                     btnKaydet.Text = "Kaydet";
                     _seciliKisi = null;
+                    lstKisiler.DataSource = null;
+                    lstKisiler.DataSource = _kisiler;
                 }
                 catch (Exception ex)
                 {
@@ -61,7 +65,6 @@ namespace WfaGiris
                 }
             }
         }
-
         public void FormuTemizle()
         {
             foreach (Control item in this.Controls)
@@ -91,8 +94,6 @@ namespace WfaGiris
             //dtpDogumTarihi.Value = DateTime.Now;
 
         }
-
-
         private void lstKisiler_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstKisiler.SelectedItem == null)
@@ -111,7 +112,6 @@ namespace WfaGiris
 
             btnKaydet.Text = "Güncelle";
         }
-
         private void silToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lstKisiler.SelectedItem == null) return;
@@ -121,7 +121,10 @@ namespace WfaGiris
 
             if (result == DialogResult.Yes)
             {
-                lstKisiler.Items.Remove(seciliKisi);
+                //lstKisiler.Items.Remove(seciliKisi);
+                _kisiler.Remove(seciliKisi);
+                lstKisiler.DataSource = null;
+                lstKisiler.DataSource = _kisiler;
                 FormuTemizle();
             }
         }
