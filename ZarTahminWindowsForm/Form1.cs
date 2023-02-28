@@ -12,11 +12,13 @@ namespace ZarTahminWindowsForm
         {
             if (cmbSayilar.SelectedIndex == -1)
             {
-                MessageBox.Show("Lütfen bir sayý seçiniz.");
+                MessageBox.Show("Lütfen bir sayi seçiniz!");
                 return;
             }
             _sayi = cmbSayilar.SelectedIndex + 1;
             tmr1.Start();
+            lstSonuc.Items.Clear();
+            btnDondur.Enabled = false;
         }
 
         private void tmr1_Tick(object sender, EventArgs e)
@@ -24,12 +26,14 @@ namespace ZarTahminWindowsForm
             _sayac++;
             _zar1 = _rnd.Next(1, 7);
             _zar2 = _rnd.Next(1, 7);
-            lstSonuc.Items.Add($"{_sayac:00}) {_zar1}-{_zar2}");
+            lstSonuc.Items.Insert(0, $"{_sayac:00}) {_zar1}-{_zar2}");
             btn1.Text = _zar1.ToString();
             btn2.Text = _zar2.ToString();
             if (_zar1 == _zar2 && _zar1 == _sayi)
             {
                 this.Text = $"{_sayac} denemede {_sayi}-{_sayi} tahmini bulundu";
+                btnDondur.Enabled = true;
+                _sayac = 0;
                 tmr1.Stop();
             }
         }
