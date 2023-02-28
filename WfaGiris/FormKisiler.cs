@@ -44,8 +44,20 @@ namespace WfaGiris
         {
             foreach (Control item in this.Controls)
             {
-                //TODO: Formdaki textbox ve datetimepicklar'ı ilk açıldığı hale getirin
-                item.Text = string.Empty;
+                if (item is TextBox)
+                    item.Text = string.Empty;
+                else if (item is DateTimePicker dPicker)
+                {
+                    //(item as DateTimePicker).Value = DateTime.Now;
+                    //((DateTimePicker)item).Value = DateTime.Now;
+                    dPicker.Value = DateTime.Now;
+                }
+                else if (item is CheckBox cBox)
+                    cBox.Checked = false;
+                else if (item is ComboBox combo)
+                    combo.SelectedIndex = -1;
+                else if (item is ListBox listBox)
+                    listBox.SelectedIndex = -1;
             }
             //txtAd.Text = string.Empty;
             //txtSoyad.Text = string.Empty;
@@ -53,6 +65,14 @@ namespace WfaGiris
             //txtTelefon.Text = string.Empty;
             //txtEmail.Text = string.Empty;
             //dtpDogumTarihi.Value = DateTime.Now;
+
+        }
+
+        private void lstKisiler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstKisiler.SelectedItem == null) return;
+
+            var seciliKisi = lstKisiler.SelectedItem as Kisi;
 
         }
     }

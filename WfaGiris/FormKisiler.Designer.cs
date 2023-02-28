@@ -151,6 +151,7 @@
             lstKisiler.Name = "lstKisiler";
             lstKisiler.Size = new Size(154, 214);
             lstKisiler.TabIndex = 7;
+            lstKisiler.SelectedIndexChanged += lstKisiler_SelectedIndexChanged;
             // 
             // dtpDogumTarihi
             // 
