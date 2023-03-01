@@ -8,7 +8,7 @@ namespace Kronometre
         }
 
         private bool _calisiyorMu = false;
-        private DateTime _oncekiZaman, _sonrakiZaman, _kronometre = new DateTime();
+        private DateTime _oncekiZaman, _sonrakiZaman, _kronometre = new DateTime(), _hedefZaman;
 
         private void btnBaslatDurdur_Click(object sender, EventArgs e)
         {
@@ -16,8 +16,11 @@ namespace Kronometre
             if (_calisiyorMu)
             {
                 if (cbGeriSayim.Checked)
+                {
                     _kronometre = new DateTime(1, 1, 1, cmbSaat.SelectedIndex, cmbDakika.SelectedIndex,
                         cmbSaniye.SelectedIndex);
+                    _hedefZaman = _kronometre;
+                }
                 else
                 {
                     _kronometre = new DateTime();
@@ -47,7 +50,21 @@ namespace Kronometre
 
             if (cbGeriSayim.Checked)
             {
-                _kronometre = _kronometre.AddMilliseconds(fark.TotalMilliseconds * -1);
+                try
+                {
+                    _kronometre = _kronometre.AddMilliseconds(fark.TotalMilliseconds * -1);
+                    var hedef = _hedefZaman - new DateTime();
+                    var fark2 = _hedefZaman - _kronometre;
+                    var sonuc = (int)(fark2.TotalMilliseconds / hedef.TotalMilliseconds * 100);
+                    pbKalanSure.Value = sonuc;
+                }
+                catch
+                {
+                    _kronometre = new DateTime();
+                    tmr1.Stop();
+                    btnBaslatDurdur.PerformClick();
+                    pbKalanSure.Value = 100;
+                }
             }
             else
             {

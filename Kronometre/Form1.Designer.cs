@@ -82,7 +82,7 @@
             // 
             pbKalanSure.BackColor = SystemColors.ActiveCaption;
             pbKalanSure.Location = new Point(12, 165);
-            pbKalanSure.MarqueeAnimationSpeed = 50;
+            pbKalanSure.MarqueeAnimationSpeed = 1000;
             pbKalanSure.Name = "pbKalanSure";
             pbKalanSure.Size = new Size(395, 23);
             pbKalanSure.Style = ProgressBarStyle.Continuous;
@@ -115,6 +115,7 @@
             // 
             // cmbSaniye
             // 
+            cmbSaniye.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSaniye.FormattingEnabled = true;
             cmbSaniye.Location = new Point(164, 22);
             cmbSaniye.Name = "cmbSaniye";
@@ -123,6 +124,7 @@
             // 
             // cmbDakika
             // 
+            cmbDakika.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbDakika.FormattingEnabled = true;
             cmbDakika.Location = new Point(85, 22);
             cmbDakika.Name = "cmbDakika";
@@ -131,6 +133,7 @@
             // 
             // cmbSaat
             // 
+            cmbSaat.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSaat.FormattingEnabled = true;
             cmbSaat.Location = new Point(6, 22);
             cmbSaat.Name = "cmbSaat";

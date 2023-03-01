@@ -47,6 +47,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7. Gün", "7. Gün", "{5C37
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kronometre", "Kronometre\Kronometre.csproj", "{A8E676D3-8D0B-4B5E-B283-E36C0E017C2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HesapMakinesi", "HesapMakinesi\HesapMakinesi.csproj", "{7DAF42B0-8DC5-48D2-AC1D-5FF6B3C28791}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,10 @@ Global
 		{A8E676D3-8D0B-4B5E-B283-E36C0E017C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8E676D3-8D0B-4B5E-B283-E36C0E017C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8E676D3-8D0B-4B5E-B283-E36C0E017C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DAF42B0-8DC5-48D2-AC1D-5FF6B3C28791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DAF42B0-8DC5-48D2-AC1D-5FF6B3C28791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DAF42B0-8DC5-48D2-AC1D-5FF6B3C28791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DAF42B0-8DC5-48D2-AC1D-5FF6B3C28791}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
