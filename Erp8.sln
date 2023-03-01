@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SayiOkuyucuFormApp", "SayiO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZarTahminWindowsForm", "ZarTahminWindowsForm\ZarTahminWindowsForm.csproj", "{5B427873-7FCC-4488-BFE2-C343FABC270D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7. Gün", "7. Gün", "{5C379D89-8B62-4E40-9836-D637D87F5156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kronometre", "Kronometre\Kronometre.csproj", "{A8E676D3-8D0B-4B5E-B283-E36C0E017C2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +109,10 @@ Global
 		{5B427873-7FCC-4488-BFE2-C343FABC270D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B427873-7FCC-4488-BFE2-C343FABC270D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B427873-7FCC-4488-BFE2-C343FABC270D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E676D3-8D0B-4B5E-B283-E36C0E017C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E676D3-8D0B-4B5E-B283-E36C0E017C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E676D3-8D0B-4B5E-B283-E36C0E017C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E676D3-8D0B-4B5E-B283-E36C0E017C2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -124,6 +132,7 @@ Global
 		{DCB85231-29FD-4B87-8115-287E409199CA} = {D62DC40C-17B6-480C-80FC-A28E33479664}
 		{4FAA5855-5CC9-47B6-85E6-8243C4038C18} = {89DDED6A-77BF-431D-B76D-0EC0DD86B1B9}
 		{5B427873-7FCC-4488-BFE2-C343FABC270D} = {89DDED6A-77BF-431D-B76D-0EC0DD86B1B9}
+		{A8E676D3-8D0B-4B5E-B283-E36C0E017C2A} = {5C379D89-8B62-4E40-9836-D637D87F5156}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38F32A3E-6269-4FF8-8D24-3FF69886088B}
