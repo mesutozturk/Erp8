@@ -77,6 +77,24 @@ namespace Kronometre
         {
             _kronometre = new DateTime();
             lblEkran.Text = _kronometre.ToString("mm:ss:fff");
+            FormuTemizle(this.Controls);
+        }
+
+        private void FormuTemizle(Control.ControlCollection collection)
+        {
+            foreach (Control item in collection)
+            {
+                if (item is TextBox)
+                    item.Text = string.Empty;
+                else if (item is CheckBox cBox)
+                    cBox.Checked = false;
+                else if (item is ComboBox combo)
+                    combo.SelectedIndex = 0;
+                else if (item is GroupBox gBox)
+                    FormuTemizle(gBox.Controls);
+            }
+
+            Console.WriteLine();
         }
 
         private void cbGeriSayim_CheckedChanged(object sender, EventArgs e)
