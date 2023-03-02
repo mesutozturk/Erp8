@@ -30,7 +30,10 @@ namespace Kalitim
             sekiller.Add(yeniKare);
             sekiller.Add(yeniDikdortgen);
             //sekiller.Add(yeniSekil);
-
+            foreach (var item in sekiller)
+            {
+                double cevre = item.CevreHesapla();
+            }
         }
     }
 }
