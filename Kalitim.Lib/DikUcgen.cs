@@ -1,6 +1,6 @@
 ﻿namespace Kalitim.Lib;
 
-public sealed class DikUcgen : Dikdortgen
+public sealed class DikUcgen : Dikdortgen //DikUcgen sınıfından kalıtım vermek istemediğimiz için sealde keywordu ekledik
 {
     public DikUcgen()
     {
@@ -21,7 +21,7 @@ public sealed class DikUcgen : Dikdortgen
     }
 }
 
-//public class SuperUcgen : DikUcgen
+//public class SuperUcgen : DikUcgen //DikUcgen sınıfı sealed olduğu için kalıtım alınamaz.
 //{
 
 //}
