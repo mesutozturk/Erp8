@@ -61,6 +61,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalitim.Lib", "Kalitim.Lib\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalitim.Console", "Kalitim.Console\Kalitim.Console.csproj", "{E1278B4C-37C0-4F28-8DAB-8F3ADBB8F706}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. Gün", "10. Gün", "{C4DEEA7A-5564-4DCA-A17C-88B6C1F98566}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kitpaci", "Kitpaci\Kitpaci.csproj", "{D16189B6-A7AD-4BA1-99AB-135F02FBACB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +151,10 @@ Global
 		{E1278B4C-37C0-4F28-8DAB-8F3ADBB8F706}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1278B4C-37C0-4F28-8DAB-8F3ADBB8F706}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1278B4C-37C0-4F28-8DAB-8F3ADBB8F706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D16189B6-A7AD-4BA1-99AB-135F02FBACB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16189B6-A7AD-4BA1-99AB-135F02FBACB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16189B6-A7AD-4BA1-99AB-135F02FBACB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16189B6-A7AD-4BA1-99AB-135F02FBACB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -172,6 +180,7 @@ Global
 		{3D962913-0229-4E8B-9FE2-E1B880344363} = {509A0838-9FC7-47EE-BA57-6D809A13112E}
 		{DE19929C-8CAE-42DC-8D85-12FAC6BBE39B} = {509A0838-9FC7-47EE-BA57-6D809A13112E}
 		{E1278B4C-37C0-4F28-8DAB-8F3ADBB8F706} = {509A0838-9FC7-47EE-BA57-6D809A13112E}
+		{D16189B6-A7AD-4BA1-99AB-135F02FBACB9} = {C4DEEA7A-5564-4DCA-A17C-88B6C1F98566}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38F32A3E-6269-4FF8-8D24-3FF69886088B}
