@@ -69,6 +69,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11. Gün", "11. Gün", "{18
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatikNesneler", "StatikNesneler\StatikNesneler.csproj", "{8740497D-3C1E-4C41-ABC8-6F99CC67DAA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySerialization", "BinarySerialization\BinarySerialization.csproj", "{BA44FA55-503B-4FD7-87A0-95DDA78B1FDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -163,6 +165,10 @@ Global
 		{8740497D-3C1E-4C41-ABC8-6F99CC67DAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8740497D-3C1E-4C41-ABC8-6F99CC67DAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8740497D-3C1E-4C41-ABC8-6F99CC67DAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA44FA55-503B-4FD7-87A0-95DDA78B1FDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA44FA55-503B-4FD7-87A0-95DDA78B1FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA44FA55-503B-4FD7-87A0-95DDA78B1FDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA44FA55-503B-4FD7-87A0-95DDA78B1FDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -190,6 +196,7 @@ Global
 		{E1278B4C-37C0-4F28-8DAB-8F3ADBB8F706} = {509A0838-9FC7-47EE-BA57-6D809A13112E}
 		{D16189B6-A7AD-4BA1-99AB-135F02FBACB9} = {C4DEEA7A-5564-4DCA-A17C-88B6C1F98566}
 		{8740497D-3C1E-4C41-ABC8-6F99CC67DAA5} = {1899665D-0399-4159-920E-25E5296F9292}
+		{BA44FA55-503B-4FD7-87A0-95DDA78B1FDB} = {1899665D-0399-4159-920E-25E5296F9292}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38F32A3E-6269-4FF8-8D24-3FF69886088B}
