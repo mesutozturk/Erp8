@@ -1,3 +1,6 @@
+using System.Xml;
+using System.Xml.Serialization;
+
 namespace BinarySerialization
 {
     public partial class Form1 : Form
@@ -29,7 +32,7 @@ namespace BinarySerialization
                     }
 
                     _memoryStream = new MemoryStream();
-                    
+
 
                     _kisiler.Add(yeniKisi);
                     lstKisiler.DataSource = _kisiler;
@@ -105,6 +108,7 @@ namespace BinarySerialization
             txtTelefon.Text = _seciliKisi.Telefon;
             txtEmail.Text = _seciliKisi.Email;
             dtpDogumTarihi.Value = _seciliKisi.DogumTarihi;
+            pbAvatar.Image = _seciliKisi.Fotograf != null ? Image.FromStream(new MemoryStream(_seciliKisi.Fotograf)) : null;
 
             btnKaydet.Text = "Güncelle";
         }
@@ -152,6 +156,7 @@ namespace BinarySerialization
 
             if (dosyaAc.ShowDialog() == DialogResult.OK)
             {
+                _memoryStream = new MemoryStream();
                 //FileStream fileStream = new FileStream(dosyaAc.FileName, FileMode.Open);
                 FileStream fileStream = File.Open(dosyaAc.FileName, FileMode.Open);
                 while (fileStream.Read(_photoBytes, 0, _bufferSize) != 0)
@@ -165,6 +170,48 @@ namespace BinarySerialization
                 pbAvatar.Image = new Bitmap(_memoryStream);
 
                 //pbAvatar.ImageLocation = dosyaAc.FileName;
+            }
+        }
+
+        private void dýþarýAktarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //XML
+            dosyaKaydet.Title = "Kiþileri XML olarak kaydet";
+            dosyaKaydet.Filter = "XML Dosyalarý (*.xml)|*.xml";
+            dosyaKaydet.FileName = "Kiþiler.xml";
+            dosyaKaydet.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            if (dosyaKaydet.ShowDialog() == DialogResult.OK)
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Kisi>));
+                TextWriter textWriter = new StreamWriter(dosyaKaydet.FileName);
+                serializer.Serialize(textWriter, _kisiler);
+                textWriter.Close();
+                textWriter.Dispose();
+                MessageBox.Show($"XML dýþarý aktarma iþlemi baþarýlý: {dosyaKaydet.FileName}");
+            }
+        }
+
+        private void içeriAktarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dosyaAc.Title = "Kiþi XML dosyasýný seçiniz";
+            dosyaAc.Filter = "XML Dosyalarý (*.xml)|*.xml";
+            dosyaAc.FileName = "Kiþiler.xml";
+            dosyaAc.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            if (dosyaAc.ShowDialog() == DialogResult.OK)
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Kisi>));
+                XmlReader textReader = new XmlTextReader(dosyaAc.FileName);
+                if (serializer.CanDeserialize(textReader))
+                {
+                    _kisiler = serializer.Deserialize(textReader) as List<Kisi>;
+                    MessageBox.Show($"{_kisiler.Count} kiþi sisteme baþarýyla eklendi");
+                    lstKisiler.DataSource = null;
+                    lstKisiler.DataSource = _kisiler;
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen doðru xml dosyasýný seçin!");
+                }
             }
         }
     }
