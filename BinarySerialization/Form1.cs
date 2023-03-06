@@ -1,5 +1,6 @@
 using System.Xml;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace BinarySerialization
 {
@@ -212,6 +213,41 @@ namespace BinarySerialization
                 {
                     MessageBox.Show("Lütfen doðru xml dosyasýný seçin!");
                 }
+            }
+        }
+
+        private void dýþarýAktarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dosyaKaydet.Title = "Bir JSON dosyasý seçiniz";
+            dosyaKaydet.Filter = "(JSON Dosyasý) | *.json";
+            dosyaKaydet.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            dosyaKaydet.FileName = "Kisiler.json";
+            if (dosyaKaydet.ShowDialog() == DialogResult.OK)
+            {
+                FileStream file = File.Open(dosyaKaydet.FileName, FileMode.Create);
+                StreamWriter writer = new StreamWriter(file);
+                writer.Write(JsonConvert.SerializeObject(_kisiler));
+                writer.Close();
+                writer.Dispose();
+            }
+        }
+
+        private void içeriAktarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dosyaAc.Title = "Bir JSON dosyasý seçiniz";
+            dosyaAc.Filter = "(JSON Dosyasý) | *.json";
+            dosyaAc.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            dosyaAc.FileName = "Kisiler.json";
+            if (dosyaAc.ShowDialog() == DialogResult.OK)
+            {
+                FileStream dosya = File.OpenRead(dosyaAc.FileName);
+                StreamReader reader = new StreamReader(dosya);
+                string dosyaIcerigi = reader.ReadToEnd();
+                //_kisiler = JsonConvert.DeserializeObject(dosyaIcerigi) as List<Kisi>;
+                _kisiler = JsonConvert.DeserializeObject<List<Kisi>>(dosyaIcerigi);
+
+                lstKisiler.DataSource = null;
+                lstKisiler.DataSource = _kisiler;
             }
         }
     }

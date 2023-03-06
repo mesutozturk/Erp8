@@ -55,6 +55,9 @@
             xMLToolStripMenuItem = new ToolStripMenuItem();
             dışarıAktarToolStripMenuItem = new ToolStripMenuItem();
             içeriAktarToolStripMenuItem = new ToolStripMenuItem();
+            jSONToolStripMenuItem = new ToolStripMenuItem();
+            dışarıAktarToolStripMenuItem1 = new ToolStripMenuItem();
+            içeriAktarToolStripMenuItem1 = new ToolStripMenuItem();
             dosyaKaydet = new SaveFileDialog();
             cmsSil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAvatar).BeginInit();
@@ -244,7 +247,7 @@
             // 
             // dosyaİşlemleriToolStripMenuItem
             // 
-            dosyaİşlemleriToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { xMLToolStripMenuItem });
+            dosyaİşlemleriToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { xMLToolStripMenuItem, jSONToolStripMenuItem });
             dosyaİşlemleriToolStripMenuItem.Name = "dosyaİşlemleriToolStripMenuItem";
             dosyaİşlemleriToolStripMenuItem.Size = new Size(98, 20);
             dosyaİşlemleriToolStripMenuItem.Text = "&Dosya İşlemleri";
@@ -259,16 +262,37 @@
             // dışarıAktarToolStripMenuItem
             // 
             dışarıAktarToolStripMenuItem.Name = "dışarıAktarToolStripMenuItem";
-            dışarıAktarToolStripMenuItem.Size = new Size(180, 22);
+            dışarıAktarToolStripMenuItem.Size = new Size(134, 22);
             dışarıAktarToolStripMenuItem.Text = "&Dışarı Aktar";
             dışarıAktarToolStripMenuItem.Click += dışarıAktarToolStripMenuItem_Click;
             // 
             // içeriAktarToolStripMenuItem
             // 
             içeriAktarToolStripMenuItem.Name = "içeriAktarToolStripMenuItem";
-            içeriAktarToolStripMenuItem.Size = new Size(180, 22);
+            içeriAktarToolStripMenuItem.Size = new Size(134, 22);
             içeriAktarToolStripMenuItem.Text = "&İçeri Aktar";
             içeriAktarToolStripMenuItem.Click += içeriAktarToolStripMenuItem_Click;
+            // 
+            // jSONToolStripMenuItem
+            // 
+            jSONToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { dışarıAktarToolStripMenuItem1, içeriAktarToolStripMenuItem1 });
+            jSONToolStripMenuItem.Name = "jSONToolStripMenuItem";
+            jSONToolStripMenuItem.Size = new Size(180, 22);
+            jSONToolStripMenuItem.Text = "JSON";
+            // 
+            // dışarıAktarToolStripMenuItem1
+            // 
+            dışarıAktarToolStripMenuItem1.Name = "dışarıAktarToolStripMenuItem1";
+            dışarıAktarToolStripMenuItem1.Size = new Size(180, 22);
+            dışarıAktarToolStripMenuItem1.Text = "Dışarı Aktar";
+            dışarıAktarToolStripMenuItem1.Click += dışarıAktarToolStripMenuItem1_Click;
+            // 
+            // içeriAktarToolStripMenuItem1
+            // 
+            içeriAktarToolStripMenuItem1.Name = "içeriAktarToolStripMenuItem1";
+            içeriAktarToolStripMenuItem1.Size = new Size(180, 22);
+            içeriAktarToolStripMenuItem1.Text = "İçeri Aktar";
+            içeriAktarToolStripMenuItem1.Click += içeriAktarToolStripMenuItem1_Click;
             // 
             // Form1
             // 
@@ -333,5 +357,8 @@
         private ToolStripMenuItem dışarıAktarToolStripMenuItem;
         private ToolStripMenuItem içeriAktarToolStripMenuItem;
         private SaveFileDialog dosyaKaydet;
+        private ToolStripMenuItem jSONToolStripMenuItem;
+        private ToolStripMenuItem dışarıAktarToolStripMenuItem1;
+        private ToolStripMenuItem içeriAktarToolStripMenuItem1;
     }
 }
