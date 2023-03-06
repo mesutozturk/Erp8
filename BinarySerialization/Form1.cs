@@ -126,5 +126,15 @@ namespace BinarySerialization
             lstKisiler.DataSource = null;
             lstKisiler.DataSource = sonuc;
         }
+
+        private void pbAvatar_Click(object sender, EventArgs e)
+        {
+            dosyaAc.Title = "Bir fotoðraf dosyasý seçiniz";
+            dosyaAc.Filter = "JPG Dosyalarý (*.jpg)|*.jpg|PNG Dosyalarý (*.png)|*.png";
+            dosyaAc.FileName = string.Empty;
+            dosyaAc.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            dosyaAc.ShowDialog();
+        }
     }
 }
