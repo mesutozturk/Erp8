@@ -20,8 +20,16 @@ namespace BinarySerialization
                         Tckn = txtTckn.Text,
                         DogumTarihi = dtpDogumTarihi.Value,
                         Email = txtEmail.Text,
-                        Telefon = txtTelefon.Text
+                        Telefon = txtTelefon.Text,
                     };
+
+                    if (_memoryStream.Length > 0)
+                    {
+                        yeniKisi.Fotograf = _memoryStream.ToArray();
+                    }
+
+                    _memoryStream = new MemoryStream();
+                    
 
                     _kisiler.Add(yeniKisi);
                     lstKisiler.DataSource = _kisiler;
@@ -42,6 +50,10 @@ namespace BinarySerialization
                     _seciliKisi.DogumTarihi = dtpDogumTarihi.Value;
                     _seciliKisi.Email = txtEmail.Text;
                     _seciliKisi.Telefon = txtTelefon.Text;
+                    if (_memoryStream.Length > 0)
+                    {
+                        _seciliKisi.Fotograf = _memoryStream.ToArray();
+                    }
                     FormuTemizle();
                     btnKaydet.Text = "Kaydet";
                     _seciliKisi = null;
@@ -127,6 +139,10 @@ namespace BinarySerialization
             lstKisiler.DataSource = sonuc;
         }
 
+        private MemoryStream _memoryStream = new MemoryStream();
+        private int _bufferSize = 64;
+        private byte[] _photoBytes = new byte[64];
+
         private void pbAvatar_Click(object sender, EventArgs e)
         {
             dosyaAc.Title = "Bir fotoðraf dosyasý seçiniz";
@@ -134,7 +150,22 @@ namespace BinarySerialization
             dosyaAc.FileName = string.Empty;
             dosyaAc.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-            dosyaAc.ShowDialog();
+            if (dosyaAc.ShowDialog() == DialogResult.OK)
+            {
+                //FileStream fileStream = new FileStream(dosyaAc.FileName, FileMode.Open);
+                FileStream fileStream = File.Open(dosyaAc.FileName, FileMode.Open);
+                while (fileStream.Read(_photoBytes, 0, _bufferSize) != 0)
+                {
+                    _memoryStream.Write(_photoBytes, 0, _bufferSize);
+                }
+                fileStream.Close();
+                fileStream.Dispose();
+
+                //pbAvatar.Image = Image.FromStream(_memoryStream);
+                pbAvatar.Image = new Bitmap(_memoryStream);
+
+                //pbAvatar.ImageLocation = dosyaAc.FileName;
+            }
         }
     }
 }
