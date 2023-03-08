@@ -1,6 +1,6 @@
 ﻿namespace AracTakip.Models;
 
-public enum KasaTipi
+public enum KasaTipleri
 {
     HatchBack,
     Sedan,
