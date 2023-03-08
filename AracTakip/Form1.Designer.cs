@@ -54,14 +54,14 @@
             // markaToolStripMenuItem
             // 
             markaToolStripMenuItem.Name = "markaToolStripMenuItem";
-            markaToolStripMenuItem.Size = new Size(180, 22);
+            markaToolStripMenuItem.Size = new Size(108, 22);
             markaToolStripMenuItem.Text = "&Marka";
             markaToolStripMenuItem.Click += markaToolStripMenuItem_Click;
             // 
             // modelToolStripMenuItem
             // 
             modelToolStripMenuItem.Name = "modelToolStripMenuItem";
-            modelToolStripMenuItem.Size = new Size(180, 22);
+            modelToolStripMenuItem.Size = new Size(108, 22);
             modelToolStripMenuItem.Text = "Model";
             modelToolStripMenuItem.Click += modelToolStripMenuItem_Click;
             // 
@@ -76,6 +76,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

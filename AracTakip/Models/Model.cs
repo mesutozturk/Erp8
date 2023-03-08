@@ -6,4 +6,9 @@ public class Model : BaseModel
     public KasaTipleri KasaTipi { get; set; }
     public Marka Marka { get; set; }
     public List<Arac> Araclar { get; set; } = new List<Arac>();
+
+    public override string ToString()
+    {
+        return Ad;
+    }
 }

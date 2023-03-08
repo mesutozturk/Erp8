@@ -17,7 +17,7 @@ namespace AracTakip.Forms
         {
             InitializeComponent();
         }
-        private List<Marka> _liste = new();
+        public List<Marka> Liste { get; set; } = new();
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             try
@@ -31,9 +31,9 @@ namespace AracTakip.Forms
                     marka.Logo = (byte[])(new ImageConverter().ConvertTo(pbResim.Image, typeof(byte[])));
                 }
 
-                _liste.Add(marka);
+                Liste.Add(marka);
                 lstListe.DataSource = null;
-                lstListe.DataSource = _liste;
+                lstListe.DataSource = Liste;
 
             }
             catch (Exception ex)
@@ -85,7 +85,7 @@ namespace AracTakip.Forms
                     seciliMarka.Logo = (byte[])(new ImageConverter().ConvertTo(pbResim.Image, typeof(byte[])));
                 }
                 lstListe.DataSource = null;
-                lstListe.DataSource = _liste;
+                lstListe.DataSource = Liste;
             }
             catch (Exception ex)
             {
