@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AracTakip.Data;
+using AracTakip.Helpers;
 using AracTakip.Models;
 
 namespace AracTakip.Forms
@@ -17,7 +19,9 @@ namespace AracTakip.Forms
         {
             InitializeComponent();
         }
-        public List<Marka> Liste { get; set; } = new();
+
+        public EnvanterContext DataContext { get; set; }
+        //public List<Marka> Liste { get; set; } = new();
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             try
@@ -31,10 +35,10 @@ namespace AracTakip.Forms
                     marka.Logo = (byte[])(new ImageConverter().ConvertTo(pbResim.Image, typeof(byte[])));
                 }
 
-                Liste.Add(marka);
+                DataContext.Markalar.Add(marka);
                 lstListe.DataSource = null;
-                lstListe.DataSource = Liste;
-
+                lstListe.DataSource = DataContext.Markalar;
+                DataHelper.Save(DataContext);
             }
             catch (Exception ex)
             {
@@ -85,7 +89,8 @@ namespace AracTakip.Forms
                     seciliMarka.Logo = (byte[])(new ImageConverter().ConvertTo(pbResim.Image, typeof(byte[])));
                 }
                 lstListe.DataSource = null;
-                lstListe.DataSource = Liste;
+                lstListe.DataSource = DataContext.Markalar;
+                DataHelper.Save(DataContext);
             }
             catch (Exception ex)
             {
@@ -95,7 +100,7 @@ namespace AracTakip.Forms
 
         private void MarkaForm_Load(object sender, EventArgs e)
         {
-            lstListe.DataSource = Liste;
+            lstListe.DataSource = DataContext.Markalar;
         }
     }
 }
