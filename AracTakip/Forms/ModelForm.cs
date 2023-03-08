@@ -60,6 +60,7 @@ namespace AracTakip.Forms
             txtAd.Text = model.Ad;
             cmbKasaTipi.SelectedItem = Enum.GetName(typeof(KasaTipleri), model.KasaTipi);
             cmbMarka.SelectedItem = model.Marka;
+            textBox1.Text = model.Marka.ToString(); 
 
         }
 

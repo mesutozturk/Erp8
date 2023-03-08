@@ -28,12 +28,14 @@ namespace AracTakip.Forms
             {
                 Marka marka = new Marka()
                 {
-                    Ad = txtAd.Text,
+                    Ad = txtAd.Text
                 };
                 if (pbResim.Image != null)
                 {
                     marka.Logo = (byte[])(new ImageConverter().ConvertTo(pbResim.Image, typeof(byte[])));
                 }
+                else
+                    marka.Logo = null;
 
                 DataContext.Markalar.Add(marka);
                 lstListe.DataSource = null;
