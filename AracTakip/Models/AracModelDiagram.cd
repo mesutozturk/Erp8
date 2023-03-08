@@ -29,21 +29,21 @@
     </TypeIdentifier>
   </Class>
   <Enum Name="AracTakip.Models.VitesTipleri">
-    <Position X="10.75" Y="0.5" Width="1.5" />
+    <Position X="12" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAIAAAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\VitesTipleri.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="AracTakip.Models.YakitTipleri">
-    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAQAEAAAAAAAAAAAAABBA=</HashCode>
       <FileName>Models\YakitTipleri.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="AracTakip.Models.KasaTipi">
-    <Position X="9" Y="0.5" Width="1.5" />
+    <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIEAAAAgAACACAAAAAAABCgAAAACAAIAAAAAAAAAgEQ=</HashCode>
       <FileName>Models\KasaTipi.cs</FileName>
