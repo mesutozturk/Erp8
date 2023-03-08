@@ -47,6 +47,7 @@
             btnGuncelle.TabIndex = 7;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // btnKaydet
             // 
@@ -66,6 +67,7 @@
             lstListe.Name = "lstListe";
             lstListe.Size = new Size(234, 304);
             lstListe.TabIndex = 9;
+            lstListe.SelectedIndexChanged += lstListe_SelectedIndexChanged;
             // 
             // txtAd
             // 

@@ -25,6 +25,7 @@ namespace AracTakip.Forms
         {
             cmbKasaTipi.DataSource = Enum.GetNames(typeof(KasaTipleri));
             cmbMarka.DataSource = Markalar;
+            lstListe.DataSource = Liste;
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -46,6 +47,27 @@ namespace AracTakip.Forms
             {
                 MessageBox.Show($"Bir hata oluştu: {ex.Message}");
             }
+        }
+
+        private void lstListe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstListe.SelectedItem == null) return;
+            Model model = (Model)lstListe.SelectedItem;
+            txtAd.Text = model.Ad;
+            cmbKasaTipi.SelectedItem = Enum.GetName(typeof(KasaTipleri), model.KasaTipi);
+            cmbMarka.SelectedItem = model.Marka;
+
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            if (lstListe.SelectedItem == null) return;
+            Model model = (Model)lstListe.SelectedItem;
+            model.Ad = txtAd.Text;
+            model.KasaTipi = (KasaTipleri)Enum.Parse(typeof(KasaTipleri), cmbKasaTipi.SelectedItem.ToString());
+            model.Marka = (Marka)cmbMarka.SelectedItem;
+            lstListe.DataSource = null;
+            lstListe.DataSource = Liste;
         }
     }
 }

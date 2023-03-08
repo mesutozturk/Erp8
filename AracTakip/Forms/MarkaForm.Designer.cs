@@ -106,6 +106,7 @@
             Controls.Add(label1);
             Name = "MarkaForm";
             Text = "MarkaForm";
+            Load += MarkaForm_Load;
             ((System.ComponentModel.ISupportInitialize)pbResim).EndInit();
             ResumeLayout(false);
             PerformLayout();
