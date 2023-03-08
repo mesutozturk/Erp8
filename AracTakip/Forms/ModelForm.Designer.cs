@@ -37,7 +37,6 @@
             label3 = new Label();
             cmbMarka = new ComboBox();
             cmbKasaTipi = new ComboBox();
-            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // btnGuncelle
@@ -126,19 +125,11 @@
             cmbKasaTipi.Size = new Size(195, 28);
             cmbKasaTipi.TabIndex = 11;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(105, 260);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 12;
-            // 
             // ModelForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(581, 432);
-            Controls.Add(textBox1);
             Controls.Add(cmbKasaTipi);
             Controls.Add(cmbMarka);
             Controls.Add(btnGuncelle);
@@ -167,6 +158,5 @@
         private Label label3;
         private ComboBox cmbMarka;
         private ComboBox cmbKasaTipi;
-        private TextBox textBox1;
     }
 }
