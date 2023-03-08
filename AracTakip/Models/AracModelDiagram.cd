@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="AracTakip.Models.BaseModel">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Arac.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AracTakip.Models.Arac">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Models\Arac.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AracTakip.Models.Marka">
+    <Position X="5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Arac.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AracTakip.Models.Model">
+    <Position X="0.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAEAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Models\Arac.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="AracTakip.Models.KasaTipi">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAgAACACAAAAAAABCgAAAACAAIAAAAAAAAAgEQ=</HashCode>
+      <FileName>Models\Arac.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
