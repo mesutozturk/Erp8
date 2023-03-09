@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using AracTakip.Data;
+﻿using AracTakip.Data;
 using AracTakip.Helpers;
 using AracTakip.Models;
 
@@ -41,6 +32,7 @@ namespace AracTakip.Forms
                 lstListe.DataSource = null;
                 lstListe.DataSource = DataContext.Markalar;
                 DataHelper.Save(DataContext);
+                this.FormCleaner(Controls);
             }
             catch (Exception ex)
             {
@@ -93,6 +85,7 @@ namespace AracTakip.Forms
                 lstListe.DataSource = null;
                 lstListe.DataSource = DataContext.Markalar;
                 DataHelper.Save(DataContext);
+                this.FormCleaner(Controls);
             }
             catch (Exception ex)
             {

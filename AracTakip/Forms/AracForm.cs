@@ -43,6 +43,7 @@ namespace AracTakip.Forms
                 lstListe.DataSource = null;
                 lstListe.DataSource = DataContext.Araclar;
                 DataHelper.Save(DataContext);
+                this.FormCleaner(Controls);
             }
             catch (Exception ex)
             {
@@ -73,6 +74,7 @@ namespace AracTakip.Forms
             lstListe.DataSource = null;
             lstListe.DataSource = DataContext.Araclar;
             DataHelper.Save(DataContext);
+            this.FormCleaner(Controls);
         }
     }
 }
