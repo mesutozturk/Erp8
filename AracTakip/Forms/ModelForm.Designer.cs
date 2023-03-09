@@ -41,9 +41,10 @@
             // 
             // btnGuncelle
             // 
-            btnGuncelle.Location = new Point(173, 109);
+            btnGuncelle.Location = new Point(198, 145);
+            btnGuncelle.Margin = new Padding(3, 4, 3, 4);
             btnGuncelle.Name = "btnGuncelle";
-            btnGuncelle.Size = new Size(77, 56);
+            btnGuncelle.Size = new Size(88, 75);
             btnGuncelle.TabIndex = 7;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(79, 109);
+            btnKaydet.Location = new Point(90, 145);
+            btnKaydet.Margin = new Padding(3, 4, 3, 4);
             btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(77, 56);
+            btnKaydet.Size = new Size(88, 75);
             btnKaydet.TabIndex = 6;
             btnKaydet.Text = "Kaydet";
             btnKaydet.UseVisualStyleBackColor = true;
@@ -62,68 +64,72 @@
             // lstListe
             // 
             lstListe.FormattingEnabled = true;
-            lstListe.ItemHeight = 15;
-            lstListe.Location = new Point(263, 6);
+            lstListe.ItemHeight = 20;
+            lstListe.Location = new Point(301, 8);
+            lstListe.Margin = new Padding(3, 4, 3, 4);
             lstListe.Name = "lstListe";
-            lstListe.Size = new Size(234, 304);
+            lstListe.Size = new Size(267, 404);
             lstListe.TabIndex = 9;
             lstListe.SelectedIndexChanged += lstListe_SelectedIndexChanged;
             // 
             // txtAd
             // 
-            txtAd.Location = new Point(79, 40);
+            txtAd.Location = new Point(90, 53);
+            txtAd.Margin = new Padding(3, 4, 3, 4);
             txtAd.Name = "txtAd";
-            txtAd.Size = new Size(171, 23);
+            txtAd.Size = new Size(195, 27);
             txtAd.TabIndex = 4;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 48);
+            label1.Location = new Point(14, 64);
             label1.Name = "label1";
-            label1.Size = new Size(62, 15);
+            label1.Size = new Size(79, 20);
             label1.TabIndex = 5;
             label1.Text = "Model Adı";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(34, 9);
+            label2.Location = new Point(39, 12);
             label2.Name = "label2";
-            label2.Size = new Size(40, 15);
+            label2.Size = new Size(50, 20);
             label2.TabIndex = 5;
             label2.Text = "Marka";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(20, 88);
+            label3.Location = new Point(23, 117);
             label3.Name = "label3";
-            label3.Size = new Size(53, 15);
+            label3.Size = new Size(69, 20);
             label3.TabIndex = 5;
             label3.Text = "Kasa Tipi";
             // 
             // cmbMarka
             // 
             cmbMarka.FormattingEnabled = true;
-            cmbMarka.Location = new Point(79, 6);
+            cmbMarka.Location = new Point(90, 8);
+            cmbMarka.Margin = new Padding(3, 4, 3, 4);
             cmbMarka.Name = "cmbMarka";
-            cmbMarka.Size = new Size(171, 23);
+            cmbMarka.Size = new Size(195, 28);
             cmbMarka.TabIndex = 10;
             // 
             // cmbKasaTipi
             // 
             cmbKasaTipi.FormattingEnabled = true;
-            cmbKasaTipi.Location = new Point(79, 80);
+            cmbKasaTipi.Location = new Point(90, 107);
+            cmbKasaTipi.Margin = new Padding(3, 4, 3, 4);
             cmbKasaTipi.Name = "cmbKasaTipi";
-            cmbKasaTipi.Size = new Size(171, 23);
+            cmbKasaTipi.Size = new Size(195, 28);
             cmbKasaTipi.TabIndex = 11;
             // 
             // ModelForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(508, 324);
+            ClientSize = new Size(581, 432);
             Controls.Add(cmbKasaTipi);
             Controls.Add(cmbMarka);
             Controls.Add(btnGuncelle);
@@ -133,6 +139,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ModelForm";
             Text = "ModelForm";
             Load += ModelForm_Load;
