@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Xml;
 using AracTakip.Data;
 using AracTakip.Helpers;
 using AracTakip.Models;
@@ -63,6 +55,19 @@ namespace AracTakip.Forms
             txtAd.Text = model.Ad;
             cmbKasaTipi.SelectedItem = Enum.GetName(typeof(KasaTipleri), model.KasaTipi);
             cmbMarka.SelectedItem = DataContext.Markalar.Find(x=>x.Id == model.Marka.Id);
+            
+            Func<bool, Marka> SearchMarkaFunc = (bool condition) =>
+            {
+                foreach (var item in DataContext.Markalar)
+                {
+                    if (condition)
+                    {
+                        return item;
+                    }
+                }
+
+                return null;
+            };
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
