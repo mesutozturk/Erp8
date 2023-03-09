@@ -67,13 +67,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kitpaci", "Kitpaci\Kitpaci.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11. Gün", "11. Gün", "{1899665D-0399-4159-920E-25E5296F9292}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatikNesneler", "StatikNesneler\StatikNesneler.csproj", "{8740497D-3C1E-4C41-ABC8-6F99CC67DAA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatikNesneler", "StatikNesneler\StatikNesneler.csproj", "{8740497D-3C1E-4C41-ABC8-6F99CC67DAA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySerialization", "BinarySerialization\BinarySerialization.csproj", "{BA44FA55-503B-4FD7-87A0-95DDA78B1FDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySerialization", "BinarySerialization\BinarySerialization.csproj", "{BA44FA55-503B-4FD7-87A0-95DDA78B1FDB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "12. Gün", "12. Gün", "{985A8E08-C6E2-4961-BBD4-6342DF2E6EC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AracTakip", "AracTakip\AracTakip.csproj", "{F7E7CB23-1DF3-4298-A5D2-3AFB479EF8D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AracTakip", "AracTakip\AracTakip.csproj", "{F7E7CB23-1DF3-4298-A5D2-3AFB479EF8D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "13. Gün", "13. Gün", "{9ABC8E85-ECDF-4F71-906C-BF6729270E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpRequestJson", "HttpRequestJson\HttpRequestJson.csproj", "{69C2B16E-B8DE-4016-A641-B2F71F33F834}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -177,6 +181,10 @@ Global
 		{F7E7CB23-1DF3-4298-A5D2-3AFB479EF8D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7E7CB23-1DF3-4298-A5D2-3AFB479EF8D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7E7CB23-1DF3-4298-A5D2-3AFB479EF8D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C2B16E-B8DE-4016-A641-B2F71F33F834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C2B16E-B8DE-4016-A641-B2F71F33F834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C2B16E-B8DE-4016-A641-B2F71F33F834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C2B16E-B8DE-4016-A641-B2F71F33F834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -206,6 +214,7 @@ Global
 		{8740497D-3C1E-4C41-ABC8-6F99CC67DAA5} = {1899665D-0399-4159-920E-25E5296F9292}
 		{BA44FA55-503B-4FD7-87A0-95DDA78B1FDB} = {1899665D-0399-4159-920E-25E5296F9292}
 		{F7E7CB23-1DF3-4298-A5D2-3AFB479EF8D9} = {985A8E08-C6E2-4961-BBD4-6342DF2E6EC9}
+		{69C2B16E-B8DE-4016-A641-B2F71F33F834} = {9ABC8E85-ECDF-4F71-906C-BF6729270E88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38F32A3E-6269-4FF8-8D24-3FF69886088B}
