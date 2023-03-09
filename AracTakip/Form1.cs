@@ -15,10 +15,11 @@ namespace AracTakip
         private EnvanterContext _dataContext;
         private MarkaForm _markaForm;
         private ModelForm _modelForm;
+        private AracForm _aracForm;
         private void Form1_Load(object sender, EventArgs e)
         {
             var data = DataHelper.Load();
-            _dataContext = data ?? new(); 
+            _dataContext = data ?? new();
         }
         private void markaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -44,6 +45,16 @@ namespace AracTakip
             }
         }
 
-
+        private void aracToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_aracForm == null || _aracForm.IsDisposed)
+            {
+                _aracForm = new AracForm();
+                _aracForm.MdiParent = this;
+                _aracForm.Text = "Araç Formu";
+                _aracForm.DataContext = _dataContext;
+                _aracForm.Show();
+            }
+        }
     }
 }

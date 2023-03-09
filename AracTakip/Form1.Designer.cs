@@ -32,6 +32,7 @@
             düzenToolStripMenuItem = new ToolStripMenuItem();
             markaToolStripMenuItem = new ToolStripMenuItem();
             modelToolStripMenuItem = new ToolStripMenuItem();
+            aracToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             // 
             // düzenToolStripMenuItem
             // 
-            düzenToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { markaToolStripMenuItem, modelToolStripMenuItem });
+            düzenToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { markaToolStripMenuItem, modelToolStripMenuItem, aracToolStripMenuItem });
             düzenToolStripMenuItem.Name = "düzenToolStripMenuItem";
             düzenToolStripMenuItem.Size = new Size(52, 20);
             düzenToolStripMenuItem.Text = "&Düzen";
@@ -54,16 +55,23 @@
             // markaToolStripMenuItem
             // 
             markaToolStripMenuItem.Name = "markaToolStripMenuItem";
-            markaToolStripMenuItem.Size = new Size(108, 22);
+            markaToolStripMenuItem.Size = new Size(180, 22);
             markaToolStripMenuItem.Text = "&Marka";
             markaToolStripMenuItem.Click += markaToolStripMenuItem_Click;
             // 
             // modelToolStripMenuItem
             // 
             modelToolStripMenuItem.Name = "modelToolStripMenuItem";
-            modelToolStripMenuItem.Size = new Size(108, 22);
-            modelToolStripMenuItem.Text = "Model";
+            modelToolStripMenuItem.Size = new Size(180, 22);
+            modelToolStripMenuItem.Text = "Mo&del";
             modelToolStripMenuItem.Click += modelToolStripMenuItem_Click;
+            // 
+            // aracToolStripMenuItem
+            // 
+            aracToolStripMenuItem.Name = "aracToolStripMenuItem";
+            aracToolStripMenuItem.Size = new Size(180, 22);
+            aracToolStripMenuItem.Text = "&Arac";
+            aracToolStripMenuItem.Click += aracToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -89,5 +97,6 @@
         private ToolStripMenuItem düzenToolStripMenuItem;
         private ToolStripMenuItem markaToolStripMenuItem;
         private ToolStripMenuItem modelToolStripMenuItem;
+        private ToolStripMenuItem aracToolStripMenuItem;
     }
 }
